@@ -22,14 +22,16 @@ public class ClubController {
 //		List<ClubDto> clubDtos = new ArrayList<>();
 //		
 //		clubDtos = clubService.selectList();
-//		
 //		model.addAttribute("list",clubDtos);
+//		
+//		System.out.println(clubDtos.get(4).getSeq());
 //		
 //		return "club/clubXdmList";
 //	}
 	@RequestMapping(value = "/club/clubXdmList")
 	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list",clubService.selectList());
+		
 		return "club/clubXdmList";
 	}
 }

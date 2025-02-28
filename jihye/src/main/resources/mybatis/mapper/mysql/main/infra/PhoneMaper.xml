@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qwer.fapp.phone.PhoneDao">
+
+	<resultMap id="resultMapObj" type="com.qwer.fapp.phone.PhoneDto" ></resultMap>
+	
+	<select id="selectList" resultMap="resultMapObj" >
+	SELECT
+	seq,
+	groupList,
+	number,
+    mainP,
+    contactMain_seq
+    FROM
+	    phone	    
+	WHERE 1=1
+	ORDER BY seq DESC 
+	</select>
+	  
+</mapper>
