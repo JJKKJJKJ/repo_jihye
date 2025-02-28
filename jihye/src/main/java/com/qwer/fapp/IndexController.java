@@ -19,31 +19,31 @@ public class IndexController {
 		 return "helloWorld";
 	 }
 	 @RequestMapping(value = "/aaa/bbb")
-	 public String index4() {
+	 public String aaa_bbb() {
 		 return "bbb/aaa";
 	 }
 	 @RequestMapping(value = "/xxx/yyy/zzz")
-	 public String index5() {
+	 public String xxx_yyy_zzz() {
 		 return "yyy/zzz";
 	 }
 	 @RequestMapping(value = "/ttt/yyy")
-	 public String index6() {
+	 public String ttt_yyy() {
 		 return "zzz/yyy/xxx";
 	 }
 	 @RequestMapping(value = "/infra/member/loginXdmForm")
-	 public String index7() {
+	 public String infra_member_loginXdmForm() {
 		 return "adm/v1/tmpname/infra/member/loginForm";
 	 }
 	 @RequestMapping(value = "/infra/codegroup/codeGroupXdmList")
-	 public String index8() {
+	 public String infra_codegroup_codeGroupXdmList() {
 		 return "adm/v1/tmpname/infra/codegroup/codeGroupList";
 	 }
 	 @RequestMapping(value = "/infra/codegroup/codeGroupXdmForm")
-	 public String index9() {
+	 public String infra_codegroup_codeGroupXdmForm() {
 		 return "adm/v1/tmpname/infra/codegroup/codeGroupForm";
 	 }
 	 @RequestMapping(value = "/infra/member/loginUsrForm")
-	 public String index10() {
+	 public String infra_member_loginUsrForm() {
 		 return "usr/v1/tmpname/infra/member/loginForm";
 	 }
 }
