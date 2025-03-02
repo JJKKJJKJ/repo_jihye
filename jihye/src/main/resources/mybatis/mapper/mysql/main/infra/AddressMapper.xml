@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qwer.fapp.address.AddressDao">
+
+	<resultMap id="resultMapObj" type="com.qwer.fapp.address.AddressDto" ></resultMap>
+	
+	<select id="selectList" resultMap="resultMapObj" >
+	SELECT
+		list,
+		address,
+		postaCode,
+		main,
+		contactMain_seq
+	FROM
+	  address
+	WHERE 1=1
+	ORDER BY seq DESC 
+	</select>
+	  
+</mapper>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>listOfAnniversaries</td>
+		<td>date</td>
+		<td>solarLuna</td>
+		<td>mainp</td>
+		<td>contactMain_seq</td>
+	</tr>
+		<tr th:each="list : ${list}">
+		<td th:text="${list.seq}"></td>	
+		<td th:text="${list.listOfAnniversaries}"></td>	
+		<td th:text="${list.date}"></td>	
+		<td th:text="${list.solarLuna}"></td>	
+		<td th:text="${list.mainp}"></td>	
+		<td th:text="${list.contactMain_seq}"></td>	
+	</tr>
+</table>
+
+</body>
+</html>

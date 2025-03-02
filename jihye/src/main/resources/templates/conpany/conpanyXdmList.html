@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>conpany</td>
+		<td>Affiliation</td>
+		<td>position</td>
+		<td>main</td>
+		<td>contactMain_seq</td>
+	</tr>
+		<tr th:each="list : ${list}">
+		<td th:text="${list.seq}"></td>	
+		<td th:text="${list.conpany}"></td>	
+		<td th:text="${list.Affiliation}"></td>	
+		<td th:text="${list.position}"></td>	
+		<td th:text="${list.main}"></td>		
+		<td th:text="${list.contactMain_seq}"></td>	
+	</tr>
+</table>
+
+</body>
+</html>

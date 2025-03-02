@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qwer.fapp.anniversary.AnniversaryDao">
+
+	<resultMap id="resultMapObj" type="com.qwer.fapp.anniversary.AnniversaryDto" ></resultMap>
+	
+	<select id="selectList" resultMap="resultMapObj" >
+	SELECT
+		seq,
+	 	listOfAnniversaries,
+		date,
+		solarLuna,
+		mainp,
+		contactMain_seq
+	FROM
+	   anniversary    
+	WHERE 1=1
+	ORDER BY seq DESC 
+	</select>
+	  
+</mapper>
