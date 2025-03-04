@@ -12,4 +12,7 @@ public class ContactmainService {
 	public List<ContactmainDto> selectList(){
 		return  contactmainDao.selectList();
 	}
+	public ContactmainDto selectOne(ContactmainDto contactmainDto){
+		return  contactmainDao.selectOne(contactmainDto);
+	}
 }

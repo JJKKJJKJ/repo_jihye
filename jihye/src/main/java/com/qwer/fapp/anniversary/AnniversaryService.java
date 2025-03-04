@@ -12,4 +12,7 @@ public class AnniversaryService {
 	public List< AnniversaryDto> selectList(){
 		return   anniversaryDao.selectList();
 	}
+	public AnniversaryDto selectOne(AnniversaryDto anniversaryDto){
+		return   anniversaryDao.selectOne(anniversaryDto);
+	}
 }

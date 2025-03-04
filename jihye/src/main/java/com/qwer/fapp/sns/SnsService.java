@@ -13,6 +13,9 @@ public class SnsService {
 	public List<SnsDto> selectList(){
 		return snsDao.selectList();
 	}
+	public SnsDto selectOne(SnsDto snsDto){
+		return snsDao.selectOne(snsDto);
+	}
 
 }
 

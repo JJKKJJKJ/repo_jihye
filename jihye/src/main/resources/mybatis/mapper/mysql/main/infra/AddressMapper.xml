@@ -7,6 +7,7 @@
 	
 	<select id="selectList" resultMap="resultMapObj" >
 	SELECT
+		seq,
 		list,
 		address,
 		postaCode,
@@ -15,6 +16,21 @@
 	FROM
 	  address
 	WHERE 1=1
+	ORDER BY seq DESC 
+	</select>
+	
+	<select id="selectOne" resultMap="resultMapObj" >
+	SELECT
+		seq,
+		list,
+		address,
+		postaCode,
+		main,
+		contactMain_seq
+	FROM
+	  address
+	WHERE 1=1
+		and seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
 	  

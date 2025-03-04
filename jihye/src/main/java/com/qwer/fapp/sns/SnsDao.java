@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface SnsDao {
 
 	public List<SnsDto>selectList();
+	public SnsDto selectOne(SnsDto snsDto);
 }

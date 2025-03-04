@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface AddressDao {
 
 	public List<AddressDto> selectList();
+	public AddressDto selectOne(AddressDto addressDto);
 	
 }

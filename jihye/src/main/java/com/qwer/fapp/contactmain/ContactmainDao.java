@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface ContactmainDao {
 	
  public List<ContactmainDto> selectList(); 
+ public ContactmainDto selectOne(ContactmainDto contactmainDto); 
 }

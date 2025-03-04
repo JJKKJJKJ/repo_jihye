@@ -12,9 +12,16 @@ public class SnsController {
 	
 	@RequestMapping(value = "/sns/snsXdmList")
 	public String codeGroupXdmList(Model model) {
-		model.addAttribute("list",snsService.selectList());
-		
+		model.addAttribute("list",snsService.selectList());	
 		return "sns/snsXdmList";
+	}
+	@RequestMapping(value = "/sns/snsXdmView")
+	public String codeGroupXdmView(Model model , SnsDto snsDto) {
+		
+		System.out.println("snsDto.getSeq():" + snsDto.getSeq());
+		
+		model.addAttribute("item",snsService.selectOne(snsDto));	
+		return "sns/snsXdmView";
 	}
 	
 }

@@ -14,5 +14,8 @@ public class AddressService {
 	public List<AddressDto> selectList(){
 		return addressDao.selectList();
 	}
+	public AddressDto selectOne(AddressDto  addressDto){
+		return addressDao.selectOne(addressDto);
+	}
 
 }	

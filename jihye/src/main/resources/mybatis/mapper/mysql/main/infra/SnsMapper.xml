@@ -17,5 +17,19 @@
 	WHERE 1=1
 	ORDER BY seq DESC 
 	</select>
+	
+	<select id="selectOne" resultMap="resultMapObj" >
+	SELECT
+	seq,
+	line,
+	massenger,
+	main,
+	contactMain_seq
+    FROM
+	    sns	    
+	WHERE 1=1
+		AND seq = #{seq}
+	ORDER BY seq DESC 
+	</select>
 	  
 </mapper>

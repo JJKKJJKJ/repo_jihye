@@ -16,5 +16,13 @@ public class AddressController {
 		model.addAttribute("list",addressService.selectList());
 		return "address/addressXdmList";
 	}
+	@RequestMapping(value = "/address/addressXdmView")
+	public String codeGroupXdmView(Model model, AddressDto  addressDto) {
+		
+		System.out.println("addressDto.getSeq():" + addressDto.getSeq());
+		
+		model.addAttribute("item",addressService.selectOne(addressDto));
+		return "address/addressXdmView";
+	}
 
 }

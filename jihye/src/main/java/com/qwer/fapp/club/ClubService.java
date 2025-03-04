@@ -27,4 +27,8 @@ public class ClubService {
 	public List<ClubDto> selectList(){
 		return  clubDao.selectList();
 	}
+	
+	public ClubDto selectOne(ClubDto clubDto){
+		return clubDao.selectOne(clubDto);
+	}
 }

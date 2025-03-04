@@ -15,28 +15,17 @@
 		<td>/important</td>	
 		<td>/img</td>	
 	</tr>
-	<tr th:each="list1 : ${list1}">
-		<td th:text="${list1.seq}"></td>	
-		<td th:text="${list1.firstName}"></td>	
-		<td th:text="${list1.lastName}"></td>	
-		<td th:text="${list1.id}"></td>	
-		<td th:text="${list1.nickname}"></td>	
-		<td th:text="${list1.memo}"></td>	
-		<td th:text="${list1.important}"></td>	
-		<td th:text="${list1.img}"></td>	
+	<tr th:each="list : ${list}">
+		<td th:text="${list.seq}"></td>	
+		<td th:text="${list.firstName}"></td>	
+		<td><a th:href="@{/contactmain/contactmainXdmView(seq=${list.seq})}" th:text="${list.lastName}"></a></td>	
+		<td th:text="${list.id}"></td>	
+		<td th:text="${list.nickname}"></td>	
+		<td th:text="${list.memo}"></td>	
+		<td th:text="${list.important}"></td>	
+		<td th:text="${list.img}"></td>	
 	</tr>	
 </table>
-
-
-<br><a href="/contactmain/contactmainXdmList">/contactmain/</a>
-<br><a href="/phone/phoneXdmList">/phone/</a>
-<br><a href="/club/clubXdmList">/club/</a>
-<br><a href="/address/addressXdmList">/address/</a>
-<br><a href="/anniversary/anniversaryXdmList">/anniversary/</a>
-<br><a href="/conpany/conpanyXdmList">/conpany</a>
-<br><a href="/homepage/homepageXdmList">/homepage/</a>
-<br><a href="/email/emailXdmList">/email/</a>
-<br><a href="/sns/snsXdmList">/sns/</a>
 
 </body>
 </html>

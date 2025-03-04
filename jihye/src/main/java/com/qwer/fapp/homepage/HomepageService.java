@@ -13,4 +13,7 @@ public class HomepageService {
 	public List<HomepageDto> selectList(){
 		return homepageDao.selectList();
 	}
+	public HomepageDto selectOne(HomepageDto homepageDto){
+		return homepageDao.selectOne(homepageDto);
+	}
 }

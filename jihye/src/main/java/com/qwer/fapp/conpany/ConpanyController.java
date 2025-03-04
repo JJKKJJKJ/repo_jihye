@@ -13,8 +13,16 @@ public class ConpanyController {
 	@RequestMapping(value = "/conpany/conpanyXdmList")
 	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list",conpanyService.selectList());
-		
 		return "conpany/conpanyXdmList";
+	}
+	
+	@RequestMapping(value = "/conpany/conpanyXdmView")
+	public String codeGroupXdmView(Model model ,  ConpanyDto  conpanyDto) {
+		
+		System.out.println("conpanyDtoDto.getSeq():" + conpanyDto.getSeq());
+		
+		model.addAttribute("item",conpanyService.selectOne(conpanyDto));
+		return "conpany/conpanyXdmView";
 	}
 	
 }

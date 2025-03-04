@@ -15,8 +15,8 @@
 	</tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
-		<td th:text="${list.listOfAnniversaries}"></td>	
-		<td th:text="${list.date}"></td>	
+		<td><a th:href="@{/anniversary/anniversaryXdmView(seq=${list.seq})}" th:text="${list.listOfAnniversaries}"></a></td>	
+		<td><a th:href="@{/anniversary/anniversaryXdmView(seq=${list.seq})}" th:text="${list.date}"></a></td>	
 		<td th:text="${list.solarLuna}"></td>	
 		<td th:text="${list.mainp}"></td>	
 		<td th:text="${list.contactMain_seq}"></td>	

@@ -13,7 +13,16 @@ public class ContactmainController {
 	
 	@RequestMapping(value = "/contactmain/contactmainXdmList")
 	public String codeGroupXdmList(Model model) {
-		model.addAttribute("list1",contactmainService.selectList());
+		model.addAttribute("list",contactmainService.selectList());
 		return "contactmain/contactmainXdmList";
-}
+	}
+	
+	@RequestMapping(value = "/contactmain/contactmainXdmView")
+	public String codeGroupXdmView(Model model,ContactmainDto contactmainDto) {
+		
+		System.out.println("contactmainDto.getSeq():" + contactmainDto.getSeq());
+		
+		model.addAttribute("item",contactmainService.selectOne(contactmainDto));
+		return "contactmain/contactmainXdmView";
+	}
 }

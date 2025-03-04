@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface PhoneDao {
 
 	public List<PhoneDto>selectList();
+	public PhoneDto selectOne(PhoneDto phoneDto);
 }

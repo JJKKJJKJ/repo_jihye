@@ -13,6 +13,10 @@ public class ConpanyService {
 	public List<ConpanyDto> selectList(){
 		return conpanyDao.selectList();
 	}
+	
+	public ConpanyDto selectOne(ConpanyDto  conpanyDto){
+		return conpanyDao.selectOne(conpanyDto);
+	}
 
 }
 

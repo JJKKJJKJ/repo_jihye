@@ -15,6 +15,15 @@ public class EmailController {
 	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list",emailService.selectList());
 		return "email/emailXdmList";
+		
+	}
+	@RequestMapping(value = "/email/emailXdmView")
+	public String codeGroupXdmView(Model model ,EmailDto emailDto) {
+		
+		System.out.println("emailDto.getSeq():" + emailDto.getSeq());
+		
+		model.addAttribute("item",emailService.selectOne(emailDto));
+		return "email/emailXdmView";
 	}
 
 }

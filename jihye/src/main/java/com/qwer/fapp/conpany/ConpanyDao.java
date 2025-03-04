@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface ConpanyDao {
 
 	public List<ConpanyDto>selectList();
+	public ConpanyDto selectOne(ConpanyDto conpanyDto);
 }

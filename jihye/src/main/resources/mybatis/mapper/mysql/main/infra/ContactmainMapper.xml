@@ -20,5 +20,21 @@
 	WHERE 1=1
 	ORDER BY seq DESC 
 	</select>
+	<select id="selectOne" resultMap="resultMapObj" >
+	SELECT
+	seq, 
+	   firstName,
+	   lastName,
+	   id,
+	   nickname,
+	   memo,
+	   important,
+	   img
+   From
+      contactmain	    
+	WHERE 1=1
+		AND seq = #{seq}
+	ORDER BY seq DESC 
+	</select>
 	  
 </mapper>

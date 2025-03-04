@@ -1,8 +1,5 @@
 package com.qwer.fapp.club;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,7 +28,16 @@ public class ClubController {
 	@RequestMapping(value = "/club/clubXdmList")
 	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list",clubService.selectList());
-		
 		return "club/clubXdmList";
+	}
+		
+	@RequestMapping(value = "/club/clubXdmView")
+	public String codeGroupXdmView(Model model , ClubDto clubDto) {
+		
+		System.out.println("clubDto.getSeq():" + clubDto.getSeq());
+		
+		model.addAttribute("item",clubService.selectOne(clubDto));
+		return "club/clubXdmView";
+		
 	}
 }

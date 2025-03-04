@@ -12,13 +12,13 @@
 	    <td>/mainP</td>
 	    <td>/contactMain_seq</td>	
 	</tr>
-	<tr th:each="list :${list}">
-	<td th:text="${list.seq}"></td>
-	<td th:text="${list.groupList}"></td>
-	<td th:text="${list.number}"></td>
-	<td th:text="${list.mainP}"></td>
-	<td th:text="${list.contactMain_seq}"></td>
-</tr>
+	<tr th:each="list : ${list}">
+		<td th:text="${list.seq}"></td>
+		<td><a th:href="@{/phone/phoneXdmView(seq=${list.seq})}" th:text="${list.groupList}"></a></td>
+		<td><a th:href="@{/phone/phoneXdmView(seq=${list.seq})}" th:text="${list.number}"></a></td>
+		<td><a th:href="@{/phone/phoneXdmView(seq=${list.seq})}" th:text="${list.mainP}"></a></td>
+		<td><a th:href="@{/phone/phoneXdmView(seq=${list.seq})}" th:text="${list.contactMain_seq}"></a></td>
+	</tr>
 </table>
 
 </body>

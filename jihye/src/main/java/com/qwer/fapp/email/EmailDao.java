@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmailDao {
 	public List<EmailDto>selectList();
+	public EmailDto selectOne(EmailDto emailDto);
 
 }

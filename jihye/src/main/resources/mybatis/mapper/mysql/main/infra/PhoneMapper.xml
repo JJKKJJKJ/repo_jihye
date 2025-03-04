@@ -7,14 +7,28 @@
 	
 	<select id="selectList" resultMap="resultMapObj" >
 	SELECT
-	seq,
-	groupList,
-	number,
-    mainP,
-    contactMain_seq
+		seq,
+		groupList,
+		number,
+	    mainP,
+	    contactMain_seq
     FROM
 	    phone	    
 	WHERE 1=1
+	ORDER BY seq DESC 
+	</select>
+	
+	<select id="selectOne" resultMap="resultMapObj" >
+	SELECT
+		seq,
+		groupList,
+		number,
+	    mainP,
+	    contactMain_seq
+    FROM
+	    phone	    
+	WHERE 1=1
+		AND seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
 	  

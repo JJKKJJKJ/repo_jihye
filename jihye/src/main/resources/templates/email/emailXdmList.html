@@ -13,7 +13,7 @@
 	</tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
-		<td th:text="${list.email}"></td>	
+		<td><a th:href="@{/email/emailXdmView(seq=${list.seq})}" th:text="${list.email}"></a></td>	
 		<td th:text="${list.mainp}"></td>	
 		<td th:text="${list.contactMain_seq}"></td>	
 	</tr>

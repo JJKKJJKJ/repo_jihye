@@ -14,7 +14,7 @@
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
 		<td th:text="${list.line}"></td>	
-		<td th:text="${list.massenger}"></td>	
+		<td><a th:href="@{/sns/snsXdmView(seq=${list.seq})}" th:text="${list.massenger}"></a></td>	
 		<td th:text="${list.main}"></td>	
 		<td th:text="${list.contactMain_seq}"></td>	
 	</tr>

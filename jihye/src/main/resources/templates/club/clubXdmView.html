@@ -9,9 +9,8 @@
 		<td>seq</td>
 		<td>directInput</td>	
 	</tr>
-		<tr th:each="list : ${list}">
-		<td th:text="${list.seq}"></td>	
-		<td><a th:href="@{/club/clubXdmView(seq=${list.seq})}" th:text="${list.directInput}"></a></td>	
+		<td th:text="${item.seq}"></td>	
+		<td th:text="${item.directInput}"></td>	
 	</tr>
 </table>
 

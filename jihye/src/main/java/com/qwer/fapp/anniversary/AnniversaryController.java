@@ -14,8 +14,16 @@ public class AnniversaryController {
 	@RequestMapping(value = "/anniversary/anniversaryXdmList")
 	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list",anniversaryService.selectList());
-		
 		return "anniversary/anniversaryXdmList";
+	}
+	
+	@RequestMapping(value = "/anniversary/anniversaryXdmView")
+	public String codeGroupXdmView(Model model ,AnniversaryDto anniversaryDto) {
+		
+		System.out.println("anniversaryDto.getSeq():" + anniversaryDto.getSeq());
+		
+		model.addAttribute("item",anniversaryService.selectOne(anniversaryDto));
+		return "anniversary/anniversaryXdmView";
 	}
 
 }

@@ -12,9 +12,17 @@ public class PhoneController {
 	
 	@RequestMapping(value = "/phone/phoneXdmList")
 	public String codeGroupXdmList(Model model) {
-		model.addAttribute("list",phoneService.selectList());
-		
+		model.addAttribute("list",phoneService.selectList());	
 		return "phone/phoneXdmList";
+	}
+	
+	@RequestMapping(value = "/phone/phoneXdmView")
+	public String codeGroupXdmView(Model model , PhoneDto phoneDto) {
+		
+		System.out.println("phoneDto.getSeq():" + phoneDto.getSeq());
+		
+		model.addAttribute("item",phoneService.selectOne(phoneDto));	
+		return "phone/phoneXdmView";
 	}
 	
 }

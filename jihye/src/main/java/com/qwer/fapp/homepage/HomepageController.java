@@ -16,5 +16,14 @@ public class HomepageController {
 		model.addAttribute("list",homepageService.selectList());
 		return "homepage/homepageXdmList";
 	}
+	
+	
+	@RequestMapping(value = "/homepage/homepageXdmView")
+	public String codeGroupXdmView(Model model ,HomepageDto homepageDto ) {
+		
+		
+		model.addAttribute("item",homepageService.selectOne(homepageDto));
+		return "homepage/homepageXdmView";
+	}
 
 }
