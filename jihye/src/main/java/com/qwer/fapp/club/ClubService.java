@@ -31,4 +31,7 @@ public class ClubService {
 	public ClubDto selectOne(ClubDto clubDto){
 		return clubDao.selectOne(clubDto);
 	}
+	public int insert(ClubDto clubDto){
+		return clubDao.insert(clubDto);
+	}
 }

@@ -11,9 +11,11 @@
 	</tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
-		<td><a th:href="@{/club/clubXdmView(seq=${list.seq})}" th:text="${list.directInput}"></a></td>	
+		<td><a th:href="@{/club/clubXdmView(seq=${list.seq})}" th:text="${list.directInput}"></a></td>
+		<!--<td><a href="/club/cllubXdmView?seq=[&{list.seq}]" th:test =${item.directInput}"></a></td>-->
 	</tr>
 </table>
-
+<br>
+<a href="/club/clubXdmForm">등록</a>
 </body>
 </html>

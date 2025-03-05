@@ -11,4 +11,5 @@ public interface ClubDao {
 //	쿼리 결과를 가져옴
 	public List<ClubDto> selectList(); 
 	public ClubDto selectOne(ClubDto clubDto); 
+	public int insert(ClubDto clubDto); 
 }

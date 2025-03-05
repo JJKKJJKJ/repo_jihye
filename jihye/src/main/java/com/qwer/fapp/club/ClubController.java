@@ -26,18 +26,33 @@ public class ClubController {
 //		return "club/clubXdmList";
 //	}
 	@RequestMapping(value = "/club/clubXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String clubXdmList(Model model) {
 		model.addAttribute("list",clubService.selectList());
 		return "club/clubXdmList";
 	}
 		
 	@RequestMapping(value = "/club/clubXdmView")
-	public String codeGroupXdmView(Model model , ClubDto clubDto) {
+	public String clubXdmView(Model model , ClubDto clubDto) {
 		
 		System.out.println("clubDto.getSeq():" + clubDto.getSeq());
 		
 		model.addAttribute("item",clubService.selectOne(clubDto));
-		return "club/clubXdmView";
+		return "club/clubXdmView";		
+	}
+	
+	@RequestMapping(value = "/club/clubXdmForm")
+	public String ClubXdmForm() {
 		
+		return "club/clubXdmForm";
+	}
+	
+	@RequestMapping(value = "/club/clubXdmInst")
+	public String ClubXdmInst(ClubDto clubDto) {
+		System.out.println("clubDto.getSeq():" + clubDto.getSeq());
+		System.out.println("clubDto.getDirectInput():" + clubDto.getDirectInput());
+		
+		clubService.insert(clubDto);
+		
+		return "redirect:/club/clubXdmList";
 	}
 }
