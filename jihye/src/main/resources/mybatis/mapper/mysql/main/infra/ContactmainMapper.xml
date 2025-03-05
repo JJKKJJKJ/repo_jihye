@@ -36,5 +36,23 @@
 		AND seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
+	
+	<insert id="insert">
+	
+	    
+	    INSERT INTO contactmain (
+	    firstName, 
+	    lastName, 
+	    important
+	    ) VALUES (
+	    #{firstName}, 
+	    #{lastName}, 
+	    1
+	    )
+
+     <selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 	  
 </mapper>

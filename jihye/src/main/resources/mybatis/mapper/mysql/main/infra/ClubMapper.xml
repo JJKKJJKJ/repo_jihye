@@ -27,11 +27,11 @@
 	</select>
 	
 	<insert id="insert">
-	 insert into club (
-		directInput
-		)values(	
-		#{directInput}
-	 )
+	    INSERT INTO club (
+       directInput
+    ) VALUES (
+        #{directInput} 
+    )
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>

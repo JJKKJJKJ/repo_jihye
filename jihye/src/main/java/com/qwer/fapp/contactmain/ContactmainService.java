@@ -15,4 +15,7 @@ public class ContactmainService {
 	public ContactmainDto selectOne(ContactmainDto contactmainDto){
 		return  contactmainDao.selectOne(contactmainDto);
 	}
+	public int insert(ContactmainDto contactmainDto){
+		return  contactmainDao.insert(contactmainDto);
+	}
 }

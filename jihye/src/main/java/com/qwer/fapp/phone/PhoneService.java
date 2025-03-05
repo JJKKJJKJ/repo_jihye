@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.qwer.fapp.address.AddressDto;
+
 @Service
 public class PhoneService {
 	@Autowired
@@ -14,7 +16,10 @@ public class PhoneService {
 		return phoneDao.selectList();
 	}
 	public PhoneDto selectOne(PhoneDto phoneDto){
-		return phoneDao.selectOne(phoneDto);
+		return phoneDao.selectOne(phoneDto); 	
+	}
+	public int insert(PhoneDto phoneDto){
+		return phoneDao.insert(phoneDto);
 	}
 
 }

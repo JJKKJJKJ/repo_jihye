@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.qwer.fapp.address.AddressDto;
+
 @Repository
 public interface PhoneDao {
 
 	public List<PhoneDto>selectList();
 	public PhoneDto selectOne(PhoneDto phoneDto);
+	public int insert(PhoneDto phoneDto);
 }

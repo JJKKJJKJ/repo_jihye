@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.qwer.fapp.sns.SnsDto;
+
 @Controller
 public class AnniversaryController {
 	@Autowired
@@ -12,18 +14,32 @@ public class AnniversaryController {
 	
 
 	@RequestMapping(value = "/anniversary/anniversaryXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String anniversaryXdmList(Model model) {
 		model.addAttribute("list",anniversaryService.selectList());
 		return "anniversary/anniversaryXdmList";
 	}
 	
 	@RequestMapping(value = "/anniversary/anniversaryXdmView")
-	public String codeGroupXdmView(Model model ,AnniversaryDto anniversaryDto) {
+	public String anniversaryXdmView(Model model ,AnniversaryDto anniversaryDto) {
 		
 		System.out.println("anniversaryDto.getSeq():" + anniversaryDto.getSeq());
 		
 		model.addAttribute("item",anniversaryService.selectOne(anniversaryDto));
 		return "anniversary/anniversaryXdmView";
+	}
+	@RequestMapping(value = "/anniversary/anniversaryXdmForm")
+	public String anniversaryXdmForm() {
+		return "anniversary/anniversaryXdmForm";
+	}
+	
+	@RequestMapping(value = "/anniversary/anniversaryXdmInst")
+	public String anniversaryXdmInst(AnniversaryDto anniversaryDto) {
+		System.out.println("anniversaryDto.getSeq():" + anniversaryDto.getSeq());
+		System.out.println("anniversaryDto.getDirectInput():" + anniversaryDto.getDate());
+		
+		anniversaryService.insert(anniversaryDto);
+		
+		return "redirect:/anniversary/anniversaryXdmList";
 	}
 
 }

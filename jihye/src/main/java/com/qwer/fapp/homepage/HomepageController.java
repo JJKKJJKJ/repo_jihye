@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.qwer.fapp.sns.SnsDto;
+
 @Controller
 public class HomepageController {
 	
@@ -12,18 +14,33 @@ public class HomepageController {
 	HomepageService homepageService;
 	
 	@RequestMapping(value = "/homepage/homepageXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String  homepageXdmList(Model model) {
 		model.addAttribute("list",homepageService.selectList());
 		return "homepage/homepageXdmList";
 	}
 	
 	
 	@RequestMapping(value = "/homepage/homepageXdmView")
-	public String codeGroupXdmView(Model model ,HomepageDto homepageDto ) {
+	public String  homepageXdmView(Model model ,HomepageDto homepageDto ) {
 		
 		
 		model.addAttribute("item",homepageService.selectOne(homepageDto));
 		return "homepage/homepageXdmView";
+	}
+	
+	@RequestMapping(value = "/homepage/homepageXdmForm")
+	public String homepageXdmForm() {
+		return "homepage/homepageXdmForm";
+	}
+	
+	@RequestMapping(value = "/homepage/homepageXdmInst")
+	public String homepageXdmInst(HomepageDto homepageDto) {
+		System.out.println("homepageDto.getSeq():" + homepageDto.getSeq());
+		System.out.println("homepageDto.getDirectInput():" + homepageDto.getHomeAddress());
+		
+		homepageService.insert(homepageDto);
+		
+		return "redirect:/homepage/homepageXdmList";
 	}
 
 }

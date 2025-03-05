@@ -28,5 +28,18 @@
 		AND seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
+	
+	<insert id="insert">
+	    INSERT INTO email (
+		email,
+		contactMain_seq
+    ) VALUES (
+		#{email},
+		1
+    )
+     <selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 	  
 </mapper>

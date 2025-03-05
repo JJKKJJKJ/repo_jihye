@@ -32,5 +32,17 @@
 			and seq = #{seq}
 		ORDER BY seq DESC 
 	</select>
-	  
+	
+	   <insert id="insert">
+	    INSERT INTO conpany (
+        position,
+        contactMain_seq
+	    ) VALUES (
+	        #{position},
+	        1
+	    )
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 </mapper>

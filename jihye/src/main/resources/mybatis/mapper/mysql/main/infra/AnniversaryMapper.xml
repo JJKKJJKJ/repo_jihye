@@ -32,5 +32,18 @@
 		AND seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
+	
+		<insert id="insert">
+	    INSERT INTO anniversary (
+		listOfAnniversaries,
+		contactMain_seq
+    ) VALUES (
+		#{listOfAnniversaries},
+		1
+    )
+    <selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 	  
 </mapper>

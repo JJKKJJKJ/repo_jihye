@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.qwer.fapp.sns.SnsDto;
+
 @Repository
 public interface ConpanyDao {
 
 	public List<ConpanyDto>selectList();
 	public ConpanyDto selectOne(ConpanyDto conpanyDto);
+	public int insert(ConpanyDto conpanyDto);
 }

@@ -4,7 +4,7 @@ public class ConpanyDto {
 	
 	private String seq;
 	private String conpany;
-	private String Affiliation;
+	private String affiliation;
 	private String position;
 	private Integer main;
 	private Integer contactMain_seq;
@@ -22,10 +22,10 @@ public class ConpanyDto {
 		this.conpany = conpany;
 	}
 	public String getAffiliation() {
-		return Affiliation;
+		return affiliation;
 	}
 	public void setAffiliation(String affiliation) {
-		Affiliation = affiliation;
+		this.affiliation = affiliation;
 	}
 	public String getPosition() {
 		return position;

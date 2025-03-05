@@ -28,5 +28,19 @@
 		AND seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
+	
+	<insert id="insert">
+	    INSERT INTO homepage (
+		homeAddress,
+		contactMain_seq
+    ) VALUES (
+		#{homeAddress},
+		1
+    )
+     <selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	  
 	  
 </mapper>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/phone/phoneXdmInst" method="post" id="form">
+	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled="disabled"/>
+	number: <input type="text" name="number" id="number" placeholder="번호 입력"/>
+	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10" disabled="disabled"/>
+<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick = function(){
+		document.getElementById("form").submit();
+	}
+	
+//	document.getElementById("btnSave").onclick = function(){
+//		alert("adfgds");
+//	}
+	
+//	document.getElementById("directInput").onclick = function(){
+//		alert("directInput");
+//	}	
+
+</script>
+</body>
+</html>

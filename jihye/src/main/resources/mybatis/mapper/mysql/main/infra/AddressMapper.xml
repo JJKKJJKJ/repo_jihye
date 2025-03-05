@@ -33,5 +33,26 @@
 		and seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
-	  
+	
+	<insert id="insert">
+  	insert into address(
+	    seq,
+		list,
+		address,
+		postaCode,
+		main,
+		contactMain_seq
+	  ) values (
+	    #{seq},
+		#{list},
+		#{address},
+		#{postaCode},
+		#{main},
+		1
+	  )
+	  <selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
 </mapper>
