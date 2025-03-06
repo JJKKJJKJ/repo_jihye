@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.qwer.fapp.club.ClubDto;
+import com.qwer.fapp.phone.PhoneDto;
 
 @Controller
 public class AddressController {
@@ -40,6 +41,21 @@ public class AddressController {
 		addressService.insert(addressDto);
 		
 		return "redirect:/address/addressXdmList";
+	}
+	                   
+	@RequestMapping(value = "/address/addressXdmMfom")
+	public String addressXdmMfom(Model model,AddressDto  addressDto) {
+		
+		model.addAttribute("item",addressService.selectOne(addressDto));
+
+		return "address/addressXdmMfom"; //hmtl 에서 바로가는 주소
+	}
+	@RequestMapping(value = "/address/addressXdmUpdt")
+	public String addressXdmUpdt(AddressDto addressDto) {
+		System.out.println("addressDto.getSeq():" + addressDto.getSeq());
+		System.out.println("addressDto.getAddress():" + addressDto.getAddress());
+		addressService.update(addressDto);
+		return "redirect:/address/addressXdmList"; // html이 아닌 내부에서 연결되는 주소
 	}
 
 }

@@ -43,4 +43,17 @@ public class ContactmainController {
 		
 		return "redirect:/contactmain/contactmainXdmList";
 	}
+	@RequestMapping(value = "/contactmain/contactmainXdmMfom")
+	public String contactmainXdmMfom(Model model , ContactmainDto contactmainDto) {
+		model.addAttribute("item",contactmainService.selectOne(contactmainDto));	
+		return "contactmain/contactmainXdmMfom";
+	}
+	@RequestMapping(value = "/contactmain/contactmainXdmUpdt")
+	public String contactmainXdmUpdt(ContactmainDto contactmainDto) {
+		System.out.println("snsDto.getSeq():" + contactmainDto.getSeq());
+		System.out.println("contactmainDto.getDirectInput():" + contactmainDto.getFirstName());
+		System.out.println("contactmainDto.getDirectInput():" + contactmainDto.getLastName());
+		contactmainService.update(contactmainDto);
+		return "redirect:/contactmain/contactmainXdmList";
+	}
 }

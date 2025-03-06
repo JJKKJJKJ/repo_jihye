@@ -12,4 +12,5 @@ public interface PhoneDao {
 	public List<PhoneDto>selectList();
 	public PhoneDto selectOne(PhoneDto phoneDto);
 	public int insert(PhoneDto phoneDto);
+	public int update(PhoneDto phoneDto);
 }

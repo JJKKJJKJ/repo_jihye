@@ -20,5 +20,8 @@ public class AnniversaryService {
 	public int insert(AnniversaryDto anniversaryDto){
 		return anniversaryDao.insert(anniversaryDto);
 	}
+	public int update(AnniversaryDto anniversaryDto){
+		return anniversaryDao.update(anniversaryDto);
+	}
 
 }

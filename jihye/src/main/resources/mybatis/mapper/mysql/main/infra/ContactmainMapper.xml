@@ -54,5 +54,12 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+	<update id="update">
+		update contactmain set
+		firstName=#{firstName},
+		lastName=#{lastName}
+		where seq=#{seq}
+	</update>
 	  
 </mapper>

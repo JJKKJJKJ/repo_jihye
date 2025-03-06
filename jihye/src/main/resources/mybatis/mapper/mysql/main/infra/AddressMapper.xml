@@ -48,11 +48,18 @@
 		#{address},
 		#{postaCode},
 		#{main},
-		1
+		#{contactMain_seq}
 	  )
 	  <selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+	<update id="update">
+		update address set
+			address=#{address}
+		where 
+			contactMain_seq=#{contactMain_seq}
+	</update>
 	
 </mapper>

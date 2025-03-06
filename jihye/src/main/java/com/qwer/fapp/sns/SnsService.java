@@ -19,6 +19,9 @@ public class SnsService {
 	public int insert(SnsDto snsDto){
 		return snsDao.insert(snsDto);
 	}
+	public int update(SnsDto snsDto){
+		return snsDao.update(snsDto);
+	}
 
 }
 

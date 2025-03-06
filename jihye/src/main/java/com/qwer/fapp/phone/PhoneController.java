@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.qwer.fapp.address.AddressDto;
+import com.qwer.fapp.club.ClubDto;
 import com.qwer.fapp.sns.SnsDto;
 
 @Controller
@@ -39,6 +40,20 @@ public class PhoneController {
 		
 		phoneService.insert(phoneDto);
 		
+		return "redirect:/phone/phoneXdmList";
+	}
+	@RequestMapping(value = "/phone/phoneXdmMfom")
+	public String phoneXdmMfom(Model model,PhoneDto phoneDto) {
+		
+		model.addAttribute("item",phoneService.selectOne(phoneDto));
+
+		return "phone/phoneXdmMfom";
+	}
+	@RequestMapping(value = "/phone/phoneXdmUpdt")
+	public String phoneXdmUpdt(PhoneDto phoneDto) {
+		System.out.println("phoneDto.getSeq():" + phoneDto.getSeq());
+		System.out.println("phoneDto.getNumbert():" + phoneDto.getNumber());
+		phoneService.update(phoneDto);
 		return "redirect:/phone/phoneXdmList";
 	}
 	

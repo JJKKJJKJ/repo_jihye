@@ -40,5 +40,17 @@ public class ConpanyController {
 		
 		return "redirect:/conpany/conpanyXdmList";
 	}
+	@RequestMapping(value = "/conpany/conpanyXdmMfom")
+	public String conpanyXdmMfom(Model model , ConpanyDto conpanyDto) {
+		model.addAttribute("item",conpanyService.selectOne(conpanyDto));	
+		return "conpany/conpanyXdmMfom";
+	}
+	@RequestMapping(value = "/conpany/conpanyXdmUpdt")
+	public String conpanyXdmUpdt(ConpanyDto conpanyDto) {
+		System.out.println("snsDto.getSeq():" + conpanyDto.getSeq());
+		System.out.println("snsDto.getDirectInput():" + conpanyDto.getPosition());
+		conpanyService.update(conpanyDto);
+		return "redirect:/conpany/conpanyXdmList";
+	}
 	
 }

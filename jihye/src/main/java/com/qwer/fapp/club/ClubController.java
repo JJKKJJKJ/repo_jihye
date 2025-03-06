@@ -55,4 +55,20 @@ public class ClubController {
 		
 		return "redirect:/club/clubXdmList";
 	}
+	
+	@RequestMapping(value = "/club/clubXdmMfom")
+	public String ClubXdmMfom(Model model,ClubDto clubDto) {
+		
+		model.addAttribute("item",clubService.selectOne(clubDto));
+
+//		System.out.println("ClubDto clubDto" + clubDto.getSeq());
+		return "club/clubXdmMfom";
+	}
+	@RequestMapping(value = "/club/clubXdmUpdt")
+	public String ClubXdmUpdt(ClubDto clubDto) {
+		System.out.println("clubDto.getSeq():" + clubDto.getSeq());
+		System.out.println("clubDto.getDirectInput():" + clubDto.getDirectInput());
+		clubService.update(clubDto);
+		return "redirect:/club/clubXdmList";
+	}
 }

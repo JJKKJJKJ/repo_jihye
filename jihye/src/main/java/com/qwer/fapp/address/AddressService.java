@@ -20,5 +20,8 @@ public class AddressService {
 	public int insert(AddressDto  addressDto){
 		return addressDao.insert(addressDto);
 	}
+	public int update(AddressDto  addressDto){
+		return addressDao.update(addressDto);
+	}
 
 }	

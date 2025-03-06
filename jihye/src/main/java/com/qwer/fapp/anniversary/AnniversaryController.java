@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.qwer.fapp.club.ClubDto;
 import com.qwer.fapp.sns.SnsDto;
 
 @Controller
@@ -39,6 +40,21 @@ public class AnniversaryController {
 		
 		anniversaryService.insert(anniversaryDto);
 		
+		return "redirect:/anniversary/anniversaryXdmList";
+	}
+	
+	@RequestMapping(value = "/anniversary/anniversaryXdmMfom")
+	public String anniversaryXdmMfom(Model model,AnniversaryDto anniversaryDto) {
+		
+		model.addAttribute("item",anniversaryService.selectOne(anniversaryDto));
+
+		return "anniversary/anniversaryXdmMfom";
+	}
+	@RequestMapping(value = "/anniversary/anniversaryXdmUpdt")
+	public String anniversaryXdmUpdt(AnniversaryDto anniversaryDto) {
+		System.out.println("anniversaryDto.getSeq():" + anniversaryDto.getSeq());
+		System.out.println("anniversaryDto.getDirectInput():" + anniversaryDto.getDate());
+		anniversaryService.update(anniversaryDto);
 		return "redirect:/anniversary/anniversaryXdmList";
 	}
 

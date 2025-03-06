@@ -19,6 +19,8 @@
 		<td th:text="${item.contactMain_seq}"></td>	
 	</tr>
 </table>
-
+<a href="/sns/snsXdmList">목록</a>
+<a href="">삭제</a>
+<a th:href="@{/sns/snsXdmMfom(seq=${item.seq})}">수정</a>
 </body>
 </html>

@@ -35,12 +35,19 @@
 		contactMain_seq
     ) VALUES (
 		#{homeAddress},
-		1
+		#{contactMain_seq}
     )
      <selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+	<update id="update">
+		update homepage set
+			homeAddress=#{homeAddress}
+		where 
+			contactMain_seq=#{contactMain_seq}
+	</update>
 	  
 	  
 </mapper>

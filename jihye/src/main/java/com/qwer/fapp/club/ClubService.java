@@ -34,4 +34,7 @@ public class ClubService {
 	public int insert(ClubDto clubDto){
 		return clubDao.insert(clubDto);
 	}
+	public int update(ClubDto clubDto){
+		return clubDao.update(clubDto);
+	}
 }

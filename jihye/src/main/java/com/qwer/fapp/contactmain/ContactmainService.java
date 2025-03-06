@@ -18,4 +18,7 @@ public class ContactmainService {
 	public int insert(ContactmainDto contactmainDto){
 		return  contactmainDao.insert(contactmainDto);
 	}
+	public int update(ContactmainDto contactmainDto){
+		return  contactmainDao.update(contactmainDto);
+	}
 }

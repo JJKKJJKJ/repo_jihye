@@ -38,11 +38,18 @@
 		contactMain_seq
     ) VALUES (
 		#{massenger},
-		1
+		#{contactMain_seq}
     )
      <selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+	
+	<update id="update">
+		update sns set
+		massenger=#{massenger}
+		where contactMain_seq=#{contactMain_seq}
+	</update>
 	  
 </mapper>

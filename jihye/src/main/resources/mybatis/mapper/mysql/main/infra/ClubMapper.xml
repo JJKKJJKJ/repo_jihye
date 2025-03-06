@@ -28,12 +28,18 @@
 	
 	<insert id="insert">
 	    INSERT INTO club (
-       directInput
-    ) VALUES (
-        #{directInput} 
-    )
+      	 directInput
+	    ) VALUES (
+	        #{directInput} 
+	    )
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+	<update id="update">
+		update club set
+		directInput=#{directInput}
+		where seq=#{seq}
+	</update>
 </mapper>

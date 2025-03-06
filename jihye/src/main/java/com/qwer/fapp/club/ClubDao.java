@@ -12,4 +12,5 @@ public interface ClubDao {
 	public List<ClubDto> selectList(); 
 	public ClubDto selectOne(ClubDto clubDto); 
 	public int insert(ClubDto clubDto); 
+	public int update(ClubDto clubDto); 
 }

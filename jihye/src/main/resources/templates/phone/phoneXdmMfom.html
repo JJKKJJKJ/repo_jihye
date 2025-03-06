@@ -4,10 +4,11 @@
 </head>
 <body>
 
-<form action="/sns/snsXdmInst" method="post" id="form">
-	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled/>
-	massenger: <input type="text" name="massenger" id="massenger" placeholder="이름을 입력"/>
-	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10"  />
+<form action="/phone/phoneXdmUpdt" method="post" id="form">
+	<input type="hidden" name="seq" th:value="${item?.seq}"/>
+	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/>
+	number: <input type="text" name="number" id="number" placeholder="번호 입력"th:value="${item?.number}"/>
+	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10" th:value="${item?.contactMain_seq}"/>
 <button type="button" id="btnSave">저장</button>
 </form>
 

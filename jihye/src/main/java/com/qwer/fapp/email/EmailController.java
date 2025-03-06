@@ -17,7 +17,6 @@ public class EmailController {
 	public String emailXdmList(Model model) {
 		model.addAttribute("list",emailService.selectList());
 		return "email/emailXdmList";
-		
 	}
 	@RequestMapping(value = "/email/emailXdmView")
 	public String emailXdmView(Model model ,EmailDto emailDto) {
@@ -40,6 +39,18 @@ public class EmailController {
 		
 		emailService.insert(emailDto);
 		
+		return "redirect:/email/emailXdmList";
+	}
+	@RequestMapping(value = "/email/emailXdmMfom")
+	public String emailXdmMfom(Model model , EmailDto emailDto) {
+		model.addAttribute("item",emailService.selectOne(emailDto));	
+		return "email/emailXdmMfom";
+	}
+	@RequestMapping(value = "/email/emailXdmUpdt")
+	public String emailXdmUpdt(EmailDto emailDto) {
+		System.out.println("emailDto.getSeq():" + emailDto.getSeq());
+		System.out.println("emailDto.getDirectInput():" + emailDto.getEmail());
+		emailService.update(emailDto);
 		return "redirect:/email/emailXdmList";
 	}
 

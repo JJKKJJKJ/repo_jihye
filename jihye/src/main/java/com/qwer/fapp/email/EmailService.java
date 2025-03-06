@@ -22,4 +22,7 @@ public class EmailService {
 	public int insert(EmailDto emailDto){
 		return emailDao.insert(emailDto);
 	}
+	public int update(EmailDto emailDto){
+		return emailDao.update(emailDto);
+	}
 }

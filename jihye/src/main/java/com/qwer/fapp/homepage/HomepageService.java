@@ -21,5 +21,8 @@ public class HomepageService {
 	public int insert(HomepageDto homepageDto){
 		return homepageDao.insert(homepageDto);
 	}
+	public int update(HomepageDto homepageDto){
+		return homepageDao.update(homepageDto);
+	}
 
 }

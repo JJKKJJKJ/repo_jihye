@@ -12,4 +12,5 @@ public interface ConpanyDao {
 	public List<ConpanyDto>selectList();
 	public ConpanyDto selectOne(ConpanyDto conpanyDto);
 	public int insert(ConpanyDto conpanyDto);
+	public int update(ConpanyDto conpanyDto);
 }

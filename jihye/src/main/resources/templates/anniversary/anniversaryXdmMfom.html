@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/anniversary/anniversaryXdmUpdt" method="post" id="form">
+	<input type="hidden" name="seq" th:value="${item?.seq}"/>
+	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled="disabled"th:value="${item?.seq}"/>
+	listOfAnniversaries: <input type="text" name="listOfAnniversaries" id="listOfAnniversaries" placeholder="이름을 입력"th:value="${item?.listOfAnniversaries} "/>
+	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10" disabled th:value="${item?.contactMain_seq}"/>
+<button type="button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick = function(){
+		document.getElementById("form").submit();
+	}
+	
+//	document.getElementById("btnSave").onclick = function(){
+//		alert("adfgds");
+//	}
+	
+//	document.getElementById("directInput").onclick = function(){
+//		alert("directInput");
+//	}	
+
+</script>
+</body>
+</html>

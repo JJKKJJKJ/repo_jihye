@@ -45,5 +45,11 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
+	
+	<update id="update">
+		update anniversary set
+		listOfAnniversaries=#{listOfAnniversaries}
+		where contactMain_seq=#{contactMain_seq}
+	</update>
 	  
 </mapper>

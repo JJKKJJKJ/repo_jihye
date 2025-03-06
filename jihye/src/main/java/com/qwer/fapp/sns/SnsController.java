@@ -39,6 +39,18 @@ public class SnsController {
 		
 		return "redirect:/sns/snsXdmList";
 	}
+	@RequestMapping(value = "/sns/snsXdmMfom")
+	public String snsXdmMfom(Model model , SnsDto snsDto) {
+		model.addAttribute("item",snsService.selectOne(snsDto));	
+		return "sns/snsXdmMfom";
+	}
+	@RequestMapping(value = "/sns/snsXdmUpdt")
+	public String snsXdmUpdt(SnsDto snsDto) {
+		System.out.println("snsDto.getSeq():" + snsDto.getSeq());
+		System.out.println("snsDto.getDirectInput():" + snsDto.getMassenger());
+		snsService.update(snsDto);
+		return "redirect:/sns/snsXdmList";
+	}
 	
 }
 

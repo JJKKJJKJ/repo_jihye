@@ -22,6 +22,9 @@ public class ConpanyService {
 	public int insert(ConpanyDto  conpanyDto){
 		return conpanyDao.insert(conpanyDto);
 	}
+	public int update(ConpanyDto  conpanyDto){
+		return conpanyDao.update(conpanyDto);
+	}
 
 }
 

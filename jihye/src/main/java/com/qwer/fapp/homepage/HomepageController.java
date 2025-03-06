@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.qwer.fapp.phone.PhoneDto;
 import com.qwer.fapp.sns.SnsDto;
 
 @Controller
@@ -40,6 +41,20 @@ public class HomepageController {
 		
 		homepageService.insert(homepageDto);
 		
+		return "redirect:/homepage/homepageXdmList";
+	}
+	@RequestMapping(value = "/homepage/homepageXdmMfom")
+	public String homepageXdmMfom(Model model,HomepageDto homepageDto) {
+		
+		model.addAttribute("item",homepageService.selectOne(homepageDto));
+
+		return "homepage/homepageXdmMfom";
+	}
+	@RequestMapping(value = "/homepage/homepageXdmUpdt")
+	public String homepageXdmUpdt(HomepageDto homepageDto) {
+		System.out.println("homepageDto.getSeq():" + homepageDto.getSeq());
+		System.out.println("homepageDto.getNumbert():" + homepageDto.getHomeAddress());
+		homepageService.update(homepageDto);
 		return "redirect:/homepage/homepageXdmList";
 	}
 
