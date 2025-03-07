@@ -12,5 +12,6 @@ public interface AnniversaryDao {
 	public int insert(AnniversaryDto anniversaryDto); 
 	public int update(AnniversaryDto anniversaryDto); 
 	public int delete(AnniversaryDto anniversaryDto); 
+	public int uelete(AnniversaryDto anniversaryDto); 
 
 }

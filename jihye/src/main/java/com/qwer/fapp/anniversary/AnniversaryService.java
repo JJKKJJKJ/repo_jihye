@@ -26,5 +26,8 @@ public class AnniversaryService {
 	public int delete(AnniversaryDto anniversaryDto){
 		return anniversaryDao.delete(anniversaryDto);
 	}
+	public int uelete(AnniversaryDto anniversaryDto){
+		return anniversaryDao.uelete(anniversaryDto);
+	}
 
 }
