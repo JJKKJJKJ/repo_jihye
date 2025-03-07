@@ -57,5 +57,10 @@ public class AnniversaryController {
 		anniversaryService.update(anniversaryDto);
 		return "redirect:/anniversary/anniversaryXdmList";
 	}
+	@RequestMapping(value = "/anniversary/anniversaryXdmDele")
+	public String anniversaryXdmDele(AnniversaryDto anniversaryDto) {
+		anniversaryService.delete(anniversaryDto);
+		return "redirect:/anniversary/anniversaryXdmList";
+	}
 
 }

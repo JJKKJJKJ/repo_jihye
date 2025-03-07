@@ -27,7 +27,7 @@
 	</tr>	
 </table>
 <a href="/contactmain/contactmainXdmList">목록</a>
-<a href="">삭제</a>
+<a th:href="@{/contactmain/contactmainXdmDele(seq=${item.seq})}">삭제</a>
 <a th:href="@{/contactmain/contactmainXdmMfom(seq=${item.seq})}">수정</a>
 </body>
 </html>

@@ -7,6 +7,8 @@ public class ClubDto {
 	
 	private String seq;
 	private String directInput;
+	private Integer delNy;
+	
 //	-----
 	public String getSeq() {
 		return seq;
@@ -20,6 +22,13 @@ public class ClubDto {
 	public void setDirectInput(String directInput) {
 		this.directInput = directInput;
 	}
+	public Integer getDelNy() {
+		return delNy;
+	}
+	public void setDelNy(Integer delNy) {
+		this.delNy = delNy;
+	}
+	
 	
 
 }

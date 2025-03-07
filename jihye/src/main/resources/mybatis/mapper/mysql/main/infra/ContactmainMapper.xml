@@ -61,5 +61,8 @@
 		lastName=#{lastName}
 		where seq=#{seq}
 	</update>
+	<delete id="delete">
+		delete from contactmain where seq=#{seq}
+	</delete>
 	  
 </mapper>

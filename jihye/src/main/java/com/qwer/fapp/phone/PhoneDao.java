@@ -13,4 +13,5 @@ public interface PhoneDao {
 	public PhoneDto selectOne(PhoneDto phoneDto);
 	public int insert(PhoneDto phoneDto);
 	public int update(PhoneDto phoneDto);
+	public int delete(PhoneDto phoneDto);
 }

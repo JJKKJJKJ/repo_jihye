@@ -56,4 +56,10 @@ public class ContactmainController {
 		contactmainService.update(contactmainDto);
 		return "redirect:/contactmain/contactmainXdmList";
 	}
+	@RequestMapping(value = "/contactmain/contactmainXdmDele")
+	public String contactmainXdmDele(ContactmainDto contactmainDto) {
+	
+		contactmainService.delete(contactmainDto);
+		return "redirect:/contactmain/contactmainXdmList";
+	}
 }

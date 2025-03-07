@@ -11,5 +11,6 @@ public interface AddressDao {
 	public AddressDto selectOne(AddressDto addressDto);
 	public int insert(AddressDto addressDto);
 	public int update(AddressDto addressDto);
+	public int delete(AddressDto addressDto);
 	
 }

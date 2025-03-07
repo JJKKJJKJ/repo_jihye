@@ -48,6 +48,9 @@
 		where 
 			contactMain_seq=#{contactMain_seq}
 	</update>
+	<delete id="delete">
+		delete from homepage where seq=#{seq}
+	</delete>
 	  
 	  
 </mapper>

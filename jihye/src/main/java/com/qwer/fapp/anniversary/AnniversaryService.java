@@ -23,5 +23,8 @@ public class AnniversaryService {
 	public int update(AnniversaryDto anniversaryDto){
 		return anniversaryDao.update(anniversaryDto);
 	}
+	public int delete(AnniversaryDto anniversaryDto){
+		return anniversaryDao.delete(anniversaryDto);
+	}
 
 }

@@ -51,4 +51,8 @@
 		 position=#{ position}
 		where contactMain_seq=#{contactMain_seq}
 	</update>
+	
+	<delete id="delete">
+		delete from conpany where seq=#{seq}
+	</delete>
 </mapper>

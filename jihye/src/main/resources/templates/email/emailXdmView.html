@@ -19,7 +19,8 @@
 	</tr>
 </table>
 <a href="/email/emailXdmList">목록</a>
-<a href="">삭제</a>
+<a th:href="@{/email/emailXdmDele(seq=${item.seq})}">삭제</a>
 <a th:href="@{/email/emailXdmMfom(seq=${item.seq})}">수정</a>
+<!-- <a th:href="@{/email/emailXdmUele(seq=${item.seq})}">업제</a> -->
 </body>
 </html>

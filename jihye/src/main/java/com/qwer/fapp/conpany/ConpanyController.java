@@ -52,5 +52,11 @@ public class ConpanyController {
 		conpanyService.update(conpanyDto);
 		return "redirect:/conpany/conpanyXdmList";
 	}
+	@RequestMapping(value = "/conpany/conpanyXdmDele")
+	public String conpanyXdmDele(ConpanyDto conpanyDto) {
+	
+		conpanyService.delete(conpanyDto);
+		return "redirect:/conpany/conpanyXdmList";
+	}
 	
 }

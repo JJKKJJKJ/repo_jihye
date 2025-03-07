@@ -37,4 +37,10 @@ public class ClubService {
 	public int update(ClubDto clubDto){
 		return clubDao.update(clubDto);
 	}
+	public int delete(ClubDto clubDto){
+		return clubDao.delete(clubDto);
+	}
+	public int uelete(ClubDto clubDto){
+		return clubDao.uelete(clubDto);
+	}
 }

@@ -13,4 +13,6 @@ public interface ClubDao {
 	public ClubDto selectOne(ClubDto clubDto); 
 	public int insert(ClubDto clubDto); 
 	public int update(ClubDto clubDto); 
+	public int delete(ClubDto clubDto); 
+	public int uelete(ClubDto clubDto); 
 }

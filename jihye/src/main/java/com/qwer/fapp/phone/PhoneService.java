@@ -24,6 +24,9 @@ public class PhoneService {
 	public int update(PhoneDto phoneDto){
 		return phoneDao.update(phoneDto);
 	}
+	public int delete(PhoneDto phoneDto){
+		return phoneDao.delete(phoneDto);
+	}
 
 }
 

@@ -71,4 +71,14 @@ public class ClubController {
 		clubService.update(clubDto);
 		return "redirect:/club/clubXdmList";
 	}
+	@RequestMapping(value = "/club/clubXdmDele")
+	public String ClubXdmDele(ClubDto clubDto) {
+		clubService.delete(clubDto);
+		return "redirect:/club/clubXdmList";
+	}
+	@RequestMapping(value = "/club/clubXdmUele")
+	public String ClubXdmUele(ClubDto clubDto) {
+		clubService.uelete(clubDto);
+		return "redirect:/club/clubXdmList";
+	}
 }

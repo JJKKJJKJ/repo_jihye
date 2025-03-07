@@ -8,11 +8,13 @@
 	<tr>
 		<td>seq</td>
 		<td>directInput</td>	
+		<td>delNy</td>	
 	</tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
 		<td><a th:href="@{/club/clubXdmView(seq=${list.seq})}" th:text="${list.directInput}"></a></td>
 		<!--<td><a href="/club/cllubXdmView?seq=[&{list.seq}]" th:test =${item.directInput}"></a></td>-->
+		<td th:text="${list.delNy}"></td>	
 	</tr>
 </table>
 <br>

@@ -57,5 +57,10 @@ public class AddressController {
 		addressService.update(addressDto);
 		return "redirect:/address/addressXdmList"; // html이 아닌 내부에서 연결되는 주소
 	}
+	@RequestMapping(value = "/address/addressXdmDele")
+	public String addressXdDele(AddressDto addressDto) {
+		addressService.delete(addressDto);
+		return "redirect:/address/addressXdmList"; // html이 아닌 내부에서 연결되는 주소
+	}
 
 }

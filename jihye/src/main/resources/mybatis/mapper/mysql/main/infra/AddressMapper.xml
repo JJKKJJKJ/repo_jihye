@@ -61,5 +61,8 @@
 		where 
 			contactMain_seq=#{contactMain_seq}
 	</update>
+	<delete id="delete">
+		delete from address where seq=#{seq}
+	</delete>
 	
 </mapper>

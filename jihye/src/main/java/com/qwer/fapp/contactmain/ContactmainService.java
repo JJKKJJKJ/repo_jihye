@@ -21,4 +21,7 @@ public class ContactmainService {
 	public int update(ContactmainDto contactmainDto){
 		return  contactmainDao.update(contactmainDto);
 	}
+	public int delete(ContactmainDto contactmainDto){
+		return  contactmainDao.delete(contactmainDto);
+	}
 }

@@ -14,6 +14,7 @@
     FROM
 	    email	    
 	WHERE 1=1
+	<!-- AND delNy = 0 -->
 	ORDER BY seq DESC 
 	</select>
 	<select id="selectOne" resultMap="resultMapObj" >
@@ -48,5 +49,14 @@
 		where 
 			contactMain_seq=#{contactMain_seq}
 	</update>
-	  
+	<delete id="delete">
+		delete from email where seq=#{seq}
+	</delete>
+	
+	<!-- <update id="uelete">
+		update email set
+		delNy=1
+		where seq=#{seq}
+	</update>
+	   -->
 </mapper>

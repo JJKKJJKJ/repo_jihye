@@ -25,4 +25,10 @@ public class EmailService {
 	public int update(EmailDto emailDto){
 		return emailDao.update(emailDto);
 	}
+	public int delete(EmailDto emailDto){
+		return emailDao.delete(emailDto);
+	}
+//	public int uelete(EmailDto emailDto){
+//		return emailDao.uelete(emailDto);
+//	}
 }
