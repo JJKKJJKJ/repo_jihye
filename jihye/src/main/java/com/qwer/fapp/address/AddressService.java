@@ -26,5 +26,8 @@ public class AddressService {
 	public int delete(AddressDto  addressDto){
 		return addressDao.delete(addressDto);
 	}
+	public int uelete(AddressDto  addressDto){
+		return addressDao.uelete(addressDto);
+	}
 
 }	

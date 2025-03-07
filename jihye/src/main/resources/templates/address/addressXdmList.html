@@ -12,13 +12,16 @@
 		<td>/postaCode
 		<td>/main</td>
 		<td>/contactMain_seq</td>
+		<td>delNy</td>	
 </tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
+		<td th:text="${list.list}"></td>	
 		<td><a th:href="@{/address/addressXdmView(seq=${list.seq})}" th:text="${list.address}"></a></td>	
 		<td th:text="${list.postaCode}"></td>	
 		<td th:text="${list.main}"></td>	
 		<td th:text="${list.contactMain_seq}"></td>	
+		<td th:text="${list.delNy}"></td>	
 	</tr>
 </table>
 <br>

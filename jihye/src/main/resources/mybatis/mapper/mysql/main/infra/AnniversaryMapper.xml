@@ -36,9 +36,11 @@
 		<insert id="insert">
 	    INSERT INTO anniversary (
 		listOfAnniversaries,
+		date,
 		contactMain_seq
     ) VALUES (
 		#{listOfAnniversaries},
+		#{date},
 		1
     )
     <selectKey resultType="String" keyProperty="seq" order="AFTER">
@@ -48,8 +50,10 @@
 	
 	<update id="update">
 		update anniversary set
-		listOfAnniversaries=#{listOfAnniversaries}
-		where contactMain_seq=#{contactMain_seq}
+		listOfAnniversaries=#{listOfAnniversaries},
+		date=#{date},
+		contactMain_seq=#{contactMain_seq}
+		where seq=#{seq}
 	</update>
 	<delete id="delete">
 		delete from anniversary where seq=#{seq}

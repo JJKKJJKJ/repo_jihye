@@ -24,7 +24,20 @@
 <a href="/address/addressXdmList">목록</a>
 <a th:href="@{/address/addressXdmDele(seq=${item.seq})}">삭제</a>
 <a th:href="@{/address/addressXdmMfom(seq=${item.seq})}">수정</a>
-              
+<a th:href="@{/address/addressXdmUele(seq=${item.seq})}"id="uelete">업제</a>
+       
+       <script type="text/javascript">
+
+/* documentsms 는 페이지를 의미  */
+document.getElementById("uelete").onclick = function(){
+	if(confirm("진짜")){
+		//삭제
+	}else{
+		//아무것도 하지 않아도 됩니다
+		return false;
+	}
+}
+</script>       
 
 </body>
 </html>
