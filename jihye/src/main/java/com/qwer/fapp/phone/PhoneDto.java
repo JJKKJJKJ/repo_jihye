@@ -7,6 +7,7 @@ public class PhoneDto {
 	private String number;
 	private Integer mainP;
 	private Integer contactMain_seq;
+	private Integer delNy;
 //	-----
 	public String getSeq() {
 		return seq;
@@ -37,6 +38,12 @@ public class PhoneDto {
 	}
 	public void setContactMain_seq(Integer contactMain_seq) {
 		this.contactMain_seq = contactMain_seq;
+	}
+	public Integer getDelNy() {
+		return delNy;
+	}
+	public void setDelNy(Integer delNy) {
+		this.delNy = delNy;
 	}
 	
 

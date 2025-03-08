@@ -34,6 +34,8 @@ public class ConpanyController {
 	@RequestMapping(value = "/conpany/conpanyXdmInst")
 	public String conpanyXdmInst(ConpanyDto conpanyDto) {
 		System.out.println("conpanyDto.getSeq():" + conpanyDto.getSeq());
+		System.out.println("conpanyDto.getDirectInput():" + conpanyDto.getConpany());
+		System.out.println("conpanyDto.getDirectInput():" + conpanyDto.getAffiliation());
 		System.out.println("conpanyDto.getDirectInput():" + conpanyDto.getPosition());
 		
 		conpanyService.insert(conpanyDto);
@@ -56,6 +58,12 @@ public class ConpanyController {
 	public String conpanyXdmDele(ConpanyDto conpanyDto) {
 	
 		conpanyService.delete(conpanyDto);
+		return "redirect:/conpany/conpanyXdmList";
+	}
+	@RequestMapping(value = "/conpany/conpanyXdmUele")
+	public String conpanyXdmUele(ConpanyDto conpanyDto) {
+		
+		conpanyService.uelete(conpanyDto);
 		return "redirect:/conpany/conpanyXdmList";
 	}
 	

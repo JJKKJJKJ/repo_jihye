@@ -11,10 +11,12 @@
 		groupList,
 		number,
 	    mainP,
-	    contactMain_seq
+	    contactMain_seq,
+	    delNy
     FROM
 	    phone	    
 	WHERE 1=1
+	 AND delNy = 0 
 	ORDER BY seq DESC 
 	</select>
 	
@@ -34,11 +36,15 @@
 	
 	<insert id="insert">
 	    INSERT INTO phone (
+	    groupList,
 		number,
-		contactMain_seq
-    ) VALUES (
+		contactMain_seq,
+		delNy
+    	) VALUES (
+   		#{groupList},
 		#{number},
-		#{contactMain_seq}
+		#{contactMain_seq},
+		0
     )
      <selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
@@ -47,12 +53,19 @@
 	
 	<update id="update">
 		update phone set
-			number=#{number}
-		where 
+			groupList=#{groupList},
+			number=#{number},
 			contactMain_seq=#{contactMain_seq}
+		where 
+			seq=#{seq}
 	</update>
 		<delete id="delete">
 		delete from  phone where seq=#{seq}
 		</delete>
+		 <update id="uelete">
+		update phone set
+		delNy=1
+		where seq=#{seq}
+	</update>
   
 </mapper>

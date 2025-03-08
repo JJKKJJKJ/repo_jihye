@@ -56,6 +56,11 @@ public class SnsController {
 		snsService.delete(snsDto);
 		return "redirect:/sns/snsXdmList";
 	}
+	@RequestMapping(value = "/sns/snsXdmUele")
+	public String snsXdmUele(SnsDto snsDto) {	
+		snsService.uelete(snsDto);
+		return "redirect:/sns/snsXdmList";
+	}
 	
 }
 

@@ -62,6 +62,12 @@ public class PhoneController {
 		phoneService.delete(phoneDto);
 		return "redirect:/phone/phoneXdmList";
 	}
+	@RequestMapping(value = "/phone/phoneXdmUele")
+	public String phoneXdmUele(PhoneDto phoneDto) {
+		
+		phoneService.uelete(phoneDto);
+		return "redirect:/phone/phoneXdmList";
+	}
 	
 
 }

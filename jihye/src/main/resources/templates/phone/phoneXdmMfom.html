@@ -3,10 +3,11 @@
 <head>
 </head>
 <body>
-
+<!--  업데이트 폼 수정-->
 <form action="/phone/phoneXdmUpdt" method="post" id="form">
 	<input type="hidden" name="seq" th:value="${item?.seq}"/>
 	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/>
+	groupList: <input type="text" name="groupList" id="groupList" placeholder="그룹 "th:value="${item?.groupList}"/>
 	number: <input type="text" name="number" id="number" placeholder="번호 입력"th:value="${item?.number}"/>
 	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10" th:value="${item?.contactMain_seq}"/>
 <button type="button" id="btnSave">저장</button>

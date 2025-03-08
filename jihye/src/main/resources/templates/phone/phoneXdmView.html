@@ -3,6 +3,7 @@
 <head>
 </head>
 <body>
+<!-- 목록중에 보여지는 폼  -->
 
 <table>
 	<tr>
@@ -23,7 +24,20 @@
 <a href="/phone/phoneXdmList">목록</a>
 <a th:href="@{/phone/phoneXdmDele(seq=${item.seq})}">삭제</a>
 <a th:href="@{/phone/phoneXdmMfom(seq=${item.seq})}">수정</a>
+<a th:href="@{/phone/phoneXdmUele(seq=${item.seq})}" id="uelete">업제</a>
 
+<script type="text/javascript">
+
+/* documentsms 는 페이지를 의미  */
+document.getElementById("uelete").onclick = function(){
+	if(confirm("진짜")){
+		//삭제
+	}else{
+		//아무것도 하지 않아도 됩니다
+		return false;
+	}
+}
+</script> 
 </body>
 </html>
 	

@@ -28,6 +28,9 @@ public class ConpanyService {
 	public int delete(ConpanyDto  conpanyDto){
 		return conpanyDao.delete(conpanyDto);
 	}
+	public int uelete(ConpanyDto  conpanyDto){
+		return conpanyDao.uelete(conpanyDto);
+	}
 
 }
 

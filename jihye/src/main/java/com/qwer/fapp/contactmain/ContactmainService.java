@@ -24,4 +24,7 @@ public class ContactmainService {
 	public int delete(ContactmainDto contactmainDto){
 		return  contactmainDao.delete(contactmainDto);
 	}
+	public int uelete(ContactmainDto contactmainDto){
+		return  contactmainDao.uelete(contactmainDto);
+	}
 }

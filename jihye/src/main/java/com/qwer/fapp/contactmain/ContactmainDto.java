@@ -10,6 +10,7 @@ public class ContactmainDto {
 	private String memo;
 	private Integer important;
 	private String img;
+	private Integer delNy;
 //	-----
 	public String getSeq() {
 		return seq;
@@ -59,6 +60,13 @@ public class ContactmainDto {
 	public void setImg(String img) {
 		this.img = img;
 	}
+	public Integer getDelNy() {
+		return delNy;
+	}
+	public void setDelNy(Integer delNy) {
+		this.delNy = delNy;
+	}
+	
 	
 	
 }

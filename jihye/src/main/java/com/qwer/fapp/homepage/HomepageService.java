@@ -27,5 +27,8 @@ public class HomepageService {
 	public int delete(HomepageDto homepageDto){
 		return homepageDao.delete(homepageDto);
 	}
+	public int uelete(HomepageDto homepageDto){
+		return homepageDao.uelete(homepageDto);
+	}
 
 }

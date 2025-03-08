@@ -7,6 +7,8 @@
 <form action="/conpany/conpanyXdmUpdt" method="post" id="form">
 	<input type="hidden" name="seq" th:value="${item?.seq}"/>
 	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/>
+	conpany: <input type="text" name="conpany" id="conpany" placeholder="회사"th:value="${item?.conpany}"/>
+	Affiliation: <input type="text" name="Affiliation" id="Affiliation" placeholder="지점"th:value="${item?.Affiliation}"/>
 	position: <input type="text" name="position" id="position" placeholder="직급"th:value="${item?.position}"/>
 	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10" th:value="${item?.contactMain_seq}"/>
 <button type="button" id="btnSave">저장</button>

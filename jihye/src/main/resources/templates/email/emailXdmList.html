@@ -10,12 +10,14 @@
 		<td>/email</td>
 		<td>/mainp</td>
 		<td>/contactMain_seq</td>
+		<td>delNy</td>	
 	</tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
 		<td><a th:href="@{/email/emailXdmView(seq=${list.seq})}" th:text="${list.email}"></a></td>	
 		<td th:text="${list.mainp}"></td>	
 		<td th:text="${list.contactMain_seq}"></td>	
+		<td th:text="${list.delNy}"></td>	
 	</tr>
 </table>
 <br>

@@ -62,5 +62,10 @@ public class HomepageController {
 		homepageService.delete(homepageDto);
 		return "redirect:/homepage/homepageXdmList";
 	}
+	@RequestMapping(value = "/homepage/homepageXdmUele")
+	public String homepageXdmUele(HomepageDto homepageDto) {
+		homepageService.uelete(homepageDto);
+		return "redirect:/homepage/homepageXdmList";
+	}
 
 }

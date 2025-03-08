@@ -4,10 +4,11 @@ public class ConpanyDto {
 	
 	private String seq;
 	private String conpany;
-	private String affiliation;
+	private String Affiliation;
 	private String position;
 	private Integer main;
 	private Integer contactMain_seq;
+	private Integer delNy;
 //	-----
 	public String getSeq() {
 		return seq;
@@ -22,10 +23,10 @@ public class ConpanyDto {
 		this.conpany = conpany;
 	}
 	public String getAffiliation() {
-		return affiliation;
+		return Affiliation;
 	}
 	public void setAffiliation(String affiliation) {
-		this.affiliation = affiliation;
+		this.Affiliation = affiliation;
 	}
 	public String getPosition() {
 		return position;
@@ -45,6 +46,13 @@ public class ConpanyDto {
 	public void setContactMain_seq(Integer contactMain_seq) {
 		this.contactMain_seq = contactMain_seq;
 	}
+	public Integer getDelNy() {
+		return delNy;
+	}
+	public void setDelNy(Integer delNy) {
+		this.delNy = delNy;
+	}
+		
 	
 	
 

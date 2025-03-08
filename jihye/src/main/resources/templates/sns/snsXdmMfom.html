@@ -7,6 +7,7 @@
 <form action="/sns/snsXdmUpdt" method="post" id="form">
 	<input type="hidden" name="seq" th:value="${item?.seq}"/>
 	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/>
+	line: <input type="text" name="line" id="line" placeholder="sns라인 입력" th:value="${item?.line}"/>
 	massenger: <input type="text" name="massenger" id="massenger" placeholder="이름을 입력" th:value="${item?.massenger}"/>
 	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10" th:value="${item?.contactMain_seq}"/>
 <button type="button" id="btnSave">저장</button>

@@ -12,4 +12,5 @@ public interface ContactmainDao {
  public int insert(ContactmainDto contactmainDto); 
  public int update(ContactmainDto contactmainDto); 
  public int delete(ContactmainDto contactmainDto); 
+ public int uelete(ContactmainDto contactmainDto); 
 }

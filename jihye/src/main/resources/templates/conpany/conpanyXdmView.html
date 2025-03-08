@@ -25,5 +25,18 @@
 <a href="/conpany/conpanyXdmList">목록</a>
 <a th:href="@{/conpany/conpanyXdmDele(seq=${item.seq})}">삭제</a>
 <a th:href="@{/conpany/conpanyXdmMfom(seq=${item.seq})}">수정</a>
+<a th:href="@{/conpany/conpanyXdmUele(seq=${item.seq})}"id="uelete">업제</a>
 </body>
+       <script type="text/javascript">
+
+/* documentsms 는 페이지를 의미  */
+document.getElementById("uelete").onclick = function(){
+	if(confirm("진짜")){
+		//삭제
+	}else{
+		//아무것도 하지 않아도 됩니다
+		return false;
+	}
+}
+</script>   
 </html>

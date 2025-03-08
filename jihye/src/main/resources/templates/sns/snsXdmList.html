@@ -10,6 +10,7 @@
 		<td>line<td>
 		<td>massenger<td>
 		<td>/contactMain_seq</td>
+		<td>delNy</td>	
 	</tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
@@ -17,6 +18,7 @@
 		<td><a th:href="@{/sns/snsXdmView(seq=${list.seq})}" th:text="${list.massenger}"></a></td>	
 		<td th:text="${list.main}"></td>	
 		<td th:text="${list.contactMain_seq}"></td>	
+		<td th:text="${list.delNy}"></td>	
 	</tr>
 </table>
 <br>

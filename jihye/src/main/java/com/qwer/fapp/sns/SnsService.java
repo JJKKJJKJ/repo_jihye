@@ -25,6 +25,9 @@ public class SnsService {
 	public int delete(SnsDto snsDto){
 		return snsDao.delete(snsDto);
 	}
+	public int uelete(SnsDto snsDto){
+		return snsDao.uelete(snsDto);
+	}
 
 }
 

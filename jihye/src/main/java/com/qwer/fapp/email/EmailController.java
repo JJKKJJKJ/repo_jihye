@@ -59,11 +59,11 @@ public class EmailController {
 		emailService.delete(emailDto);
 		return "redirect:/email/emailXdmList";
 	}
-//	@RequestMapping(value = "/email/emailXdmUele")
-//	public String emailXdmUele(EmailDto emailDto) {
-//		
-//		emailService.uelete(emailDto);
-//		return "redirect:/email/emailXdmList";
-//	}
+	@RequestMapping(value = "/email/emailXdmUele")
+	public String emailXdmUele(EmailDto emailDto) {
+		
+		emailService.uelete(emailDto);
+		return "redirect:/email/emailXdmList";
+	}
 
 }

@@ -28,7 +28,7 @@ public class EmailService {
 	public int delete(EmailDto emailDto){
 		return emailDao.delete(emailDto);
 	}
-//	public int uelete(EmailDto emailDto){
-//		return emailDao.uelete(emailDto);
-//	}
+	public int uelete(EmailDto emailDto){
+		return emailDao.uelete(emailDto);
+	}
 }

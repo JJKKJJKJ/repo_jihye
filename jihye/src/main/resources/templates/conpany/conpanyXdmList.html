@@ -12,14 +12,16 @@
 		<td>position</td>
 		<td>main</td>
 		<td>contactMain_seq</td>
+		<td>delNy</td>	
 	</tr>
 		<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>	
 		<td><a th:href="@{/conpany/conpanyXdmView(seq=${list.seq})}" th:text="${list.conpany}"></a></td>	
-		<td th:text="${list.Affiliation}"></td>	
-		<td th:text="${list.position}"></td>	
+		<td> <a th:href="@{/conpany/conpanyXdmView(seq=${list.seq})}" th:text="${list.Affiliation}"></a></td>	
+		<td> <a th:href="@{/conpany/conpanyXdmView(seq=${list.seq})}" th:text="${list.position}"></a></td>	
 		<td th:text="${list.main}"></td>		
 		<td th:text="${list.contactMain_seq}"></td>	
+		<td th:text="${list.delNy}"></td>	
 	</tr>
 </table>
 <br>

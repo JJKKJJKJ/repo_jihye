@@ -11,10 +11,12 @@
 	line,
 	massenger,
 	main,
-	contactMain_seq
+	contactMain_seq,
+	delNy
     FROM
 	    sns	    
 	WHERE 1=1
+	AND delNy = 0 
 	ORDER BY seq DESC 
 	</select>
 	
@@ -34,11 +36,15 @@
 	
 	<insert id="insert">
 	    INSERT INTO sns (
+	    line,
 		massenger,
-		contactMain_seq
-    ) VALUES (
+		contactMain_seq,
+		delNy
+    	) VALUES (
+   		#{line},
 		#{massenger},
-		#{contactMain_seq}
+		#{contactMain_seq},
+		0
     )
      <selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
@@ -48,11 +54,19 @@
 	
 	<update id="update">
 		update sns set
-		massenger=#{massenger}
-		where contactMain_seq=#{contactMain_seq}
+		line=#{line},
+		massenger=#{massenger},
+		contactMain_seq=#{contactMain_seq}
+		where seq=#{seq}
 	</update>
 	
 	<delete id="delete">
-	delete from sns where seq=#{seq}</delete>
+	delete from sns where seq=#{seq}
+	</delete>
+	 <update id="uelete">
+		update sns set
+		delNy=1
+		where seq=#{seq}
+	</update>
 	  
 </mapper>

@@ -14,4 +14,5 @@ public interface ConpanyDao {
 	public int insert(ConpanyDto conpanyDto);
 	public int update(ConpanyDto conpanyDto);
 	public int delete(ConpanyDto conpanyDto);
+	public int uelete(ConpanyDto conpanyDto);
 }

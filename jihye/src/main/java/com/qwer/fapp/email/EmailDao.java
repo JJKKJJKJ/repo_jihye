@@ -14,5 +14,5 @@ public interface EmailDao {
 	public int insert(EmailDto emailDto);
 	public int update(EmailDto emailDto);
 	public int delete(EmailDto emailDto);
-//	public int uelete(EmailDto emailDto);
+	public int uelete(EmailDto emailDto);
 }

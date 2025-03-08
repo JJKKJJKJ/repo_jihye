@@ -21,7 +21,7 @@
 	ORDER BY seq DESC 
 	</select>
 	
-	<select id="selectOne" resultMap="resultMapObj" >
+	<select id="selectOne" resultMap="resultMapObj" ><!-- 목록중에 하나 가져와서 보여주는 -->
 	SELECT
 		seq,
 		list,

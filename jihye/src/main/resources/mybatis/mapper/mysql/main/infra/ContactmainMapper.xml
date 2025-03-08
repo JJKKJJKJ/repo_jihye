@@ -14,10 +14,12 @@
 	   nickname,
 	   memo,
 	   important,
-	   img
+	   img,
+	   delNy
    From
       contactmain	    
 	WHERE 1=1
+	AND delNy = 0 
 	ORDER BY seq DESC 
 	</select>
 	<select id="selectOne" resultMap="resultMapObj" >
@@ -33,21 +35,22 @@
    From
       contactmain	    
 	WHERE 1=1
+	
 		AND seq = #{seq}
 	ORDER BY seq DESC 
 	</select>
 	
-	<insert id="insert">
-	
-	    
+	<insert id="insert">  
 	    INSERT INTO contactmain (
 	    firstName, 
 	    lastName, 
-	    important
+	    important,
+	    delNy
 	    ) VALUES (
 	    #{firstName}, 
 	    #{lastName}, 
-	    1
+	    #{important},
+	    0
 	    )
 
      <selectKey resultType="String" keyProperty="seq" order="AFTER">
@@ -64,5 +67,10 @@
 	<delete id="delete">
 		delete from contactmain where seq=#{seq}
 	</delete>
+	<update id="uelete">
+		update contactmain set
+		delNy=1
+		where seq=#{seq}
+	</update>
 	  
 </mapper>

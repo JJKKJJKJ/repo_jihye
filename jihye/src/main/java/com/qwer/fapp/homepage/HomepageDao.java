@@ -12,4 +12,5 @@ public interface HomepageDao {
 	public int insert(HomepageDto homepageDto);
 	public int update(HomepageDto homepageDto);
 	public int delete(HomepageDto homepageDto);
+	public int uelete(HomepageDto homepageDto);
 }

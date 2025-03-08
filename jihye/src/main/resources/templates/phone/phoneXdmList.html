@@ -10,7 +10,8 @@
 		<td>/groupList</td>
 		<td>/number</td>
 	    <td>/mainP</td>
-	    <td>/contactMain_seq</td>	
+	    <td>/contactMain_seq</td>
+	    <td>delNy</td>		
 	</tr>
 	<tr th:each="list : ${list}">
 		<td th:text="${list.seq}"></td>
@@ -18,6 +19,7 @@
 		<td><a th:href="@{/phone/phoneXdmView(seq=${list.seq})}" th:text="${list.number}"></a></td>
 		<td><a th:href="@{/phone/phoneXdmView(seq=${list.seq})}" th:text="${list.mainP}"></a></td>
 		<td><a th:href="@{/phone/phoneXdmView(seq=${list.seq})}" th:text="${list.contactMain_seq}"></a></td>
+		<td th:text="${list.delNy}"></td>	
 	</tr>
 </table>
 
