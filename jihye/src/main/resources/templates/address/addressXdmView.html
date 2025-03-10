@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-
+<!-- 보여지는 페이지  -->
 <table>
 <tr>
 		<td>seq</td>
@@ -14,7 +14,7 @@
 		<td>/contactMain_seq</td>
 </tr>
 		<tr >
-		<td th:text="${item.seq}"></td>	
+		<td th:text="${item.seq}"></td>	<!-- 태그안에 텍스트를 서버에서 전달받은 값에 따라 표현하고자 할때 사용됨 -->
 		<td th:text="${item.address}"></td>	
 		<td th:text="${item.postaCode}"></td>	
 		<td th:text="${item.main}"></td>	

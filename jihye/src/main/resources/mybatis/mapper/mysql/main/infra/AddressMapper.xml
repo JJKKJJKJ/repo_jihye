@@ -38,7 +38,7 @@
 	
 	<insert id="insert"> <!-- 등록부분 -->
   	insert into address(
-	    seq,
+	 <!--    seq, -->
 		list,
 		address,
 		postaCode,
@@ -46,16 +46,16 @@
 		contactMain_seq,<!-- not null  무조건 값을 넣어줘야해 안넣어줘서 에러발생-->
 		delNy
 	  ) values (
-	    #{seq},
+	<!--     #{seq}, -->
 		#{list},
 		#{address},
 		#{postaCode},
 		#{main},
-		#{contactMain_seq},
+		#{contactMain_seq}, <!-- #:미지수 어떤값인지 몰른다 -->
 		0
 	  )
-	  <selectKey resultType="String" keyProperty="seq" order="AFTER">
-			SELECT last_insert_id()
+	  <selectKey resultType="String" keyProperty="seq" order="AFTER">   <!--seq:Db에서 AL설정으로 들어가 있기때문에 / 태그 selectKey 자동증가 해주는 설정 -->
+			SELECT last_insert_id() <!--마지막에 등록한 id를 선택해서 seq에 저장해놓는다는뜻-->
 		</selectKey>
 	</insert>
 	

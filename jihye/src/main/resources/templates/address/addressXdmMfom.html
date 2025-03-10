@@ -5,7 +5,7 @@
 <body>
 
 <form action="/address/addressXdmUpdt" method="post" id="form">
-	<input type="hidden" name="seq" th:value="${item?.seq}"/>
+	<input type="hidden" name="seq" th:value="${item?.seq}"/> <!-- ?:null값이여도 페이지를 띄욱해주겠다는 뜻 -->
 	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/>
 	address: <input type="text" name="address" id="address" placeholder="주소 입력"th:value="${item?.address}"/>
 	contactMain_seq:<input type="text" name="contactMain_seq" id="contactMain_seq" maxlength="10" th:value="${item?.contactMain_seq}"/>
@@ -22,9 +22,7 @@
 //		alert("adfgds");
 //	}
 	
-//	document.getElementById("directInput").onclick = function(){
-//		alert("directInput");
-//	}	
+
 
 </script>
 </body>
